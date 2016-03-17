@@ -19,7 +19,7 @@ personal build.sh script that will help save you time when invoking
 `vagrant up` or `vagrant provision`.  You may choose to use this to
 help save you keystorkes.
 
-Here is an example usage of `build.sh'
+Here is an example usage of `build.sh`
 
 ```
 cat > ./build.sh << BUILDSH_EOF
