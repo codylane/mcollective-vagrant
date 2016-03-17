@@ -11,7 +11,11 @@ DOMAIN="cmfl2.net"
 
 # these nodes do not need a lot of RAM, 384 is
 # is enough but you can tweak that here
+# This is for each node you spin up.
 MEMORY=384
+
+# activemq + mcollective broker memory requirements
+MIDDLEWARE_MEMORY=768
 
 # the instances is a hostonly network, this will
 # be the prefix to the subnet they use
@@ -40,7 +44,7 @@ Vagrant.configure("2") do |config|
     vmconfig.vm.network :private_network, ip: "#{SUBNET}.10"
     vmconfig.vm.hostname = "middleware.#{DOMAIN}"
     vmconfig.vm.provider :virtualbox do |vb|
-        vb.customize ["modifyvm", :id, "--memory", MEMORY]
+        vb.customize ["modifyvm", :id, "--memory", MIDDLEWARE_MEMORY]
         vb.customize ['modifyvm', :id, '--natdnsproxy1', 'on']
         vb.customize ['modifyvm', :id, '--natdnshostresolver1', 'on']
     end

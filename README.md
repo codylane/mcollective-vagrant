@@ -5,6 +5,19 @@ A vagrant machine that is capable of building a small mcollective environment fo
 * Requires that you have vagrant installed and working with virtualbox
 * This has only been tested on CentOS 6.x.
 
+# What does this do?
+## On the middleware host
+* This contains (activemq + mcollective) that allows your nodes to
+  connect too.
+
+## On a node
+* This contains (activemq) + the mco command so that you can run things
+  like `mco ping`, `mco find` etc.
+
+## How do I customize the number of nodes?
+* Update your Vagrant file and specify the number of instances in the
+  `INSTANCE` variable.  This defaults to 5 nodes with `384MB` of RAM.
+
 # Configuration
 You will need to set the followin environment variables in order to use
 this integration
