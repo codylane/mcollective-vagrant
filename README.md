@@ -23,8 +23,8 @@ Here is an example usage of `build.sh'
 
 ```
 cat > ./build.sh << BUILDSH_EOF
-export VAGRANT_BOX=''
-export VAGRANT_BOX_URL=''
+export VAGRANT_BOX='centos-65-x64-vbox436-nocm'
+export VAGRANT_BOX_URL='http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-nocm.box'
 
 vagrant $*
 
@@ -49,7 +49,13 @@ chmod 755 ./build.sh
 ./build.sh up
 ```
 
+## How to ssh to a particulare node
 * This allows you to ssh to the middleware host
 ```
-./build.sh ssh middleware
+vagrant ssh middleware
+```
+
+* This allows you to ssh to node0
+```
+vagrant ssh node0
 ```
