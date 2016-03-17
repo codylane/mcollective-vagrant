@@ -1,2 +1,5 @@
 ## vagrant
 .vagrant
+
+## a helper script used to build your vagrant enviroment
+build.sh

@@ -1,13 +1,6 @@
 #!/bin/bash
 
-export FACTER_middleware_pi="192.168.2.10"
-
-sudo puppet apply --modulepath /vagrant/deploy/modules apply -e '
-  class { "java":
-	distribution => 'jdk',
-	version      => 'latest',
-  }
-'
+export FACTER_middleware_ip="192.168.2.10"
 
 sudo puppet apply \
   --pluginsync \
