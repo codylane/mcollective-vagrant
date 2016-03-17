@@ -1,0 +1,4 @@
+activemq::mq_admin_username: system
+activemq::mq_admin_password: manager
+
+activemq::version: 5.9.1-2.el6
